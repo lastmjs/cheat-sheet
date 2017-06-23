@@ -40,3 +40,11 @@ To make live changes to a Dokku application:
 4. Restart the container
 5. Change the `nginx.conf` on the host server for Dokku. `/home/dokku/[app name]/nginx.conf`. Change the upstream ip address to the ip address of the container
 6. Restart nginx: `sudo service nginx reload`
+
+## AWS
+
+Log into server:
+
+```bash
+ssh -i ~/.ssh/[private key name].pem ubuntu@[server ip or domain name]
+```
