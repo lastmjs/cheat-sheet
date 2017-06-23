@@ -32,3 +32,11 @@ sudo docker inspect [container id]
 
 ## Dokku
 
+To make live changes to a Dokku application:
+
+1. Log into the container
+2. Make the changes
+3. Commit the changes
+4. Restart the container
+5. Change the `nginx.conf` on the host server for Dokku. `/home/dokku/[app name]/nginx.conf`. Change the upstream ip address to the ip address of the container
+6. Restart nginx: `sudo service nginx reload`
