@@ -24,5 +24,11 @@ Commit changes to a Docker container (if you need to edit the files on a live co
 sudo docker commit [container id]
 ```
 
+Get container info such as the IP address:
+
+```bash
+sudo docker inspect [container id]
+```
+
 ## Dokku
 
