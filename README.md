@@ -51,7 +51,7 @@ ssh -i ~/.ssh/[private key name].pem ubuntu@[server ip or domain name]
 
 ## Git
 
-Remove a directory completely from a git repo:
+Remove a directory completely from git history:
 
 ``` bash
 git rm -r --cached [directory name]
