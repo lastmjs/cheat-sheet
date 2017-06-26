@@ -48,3 +48,13 @@ Log into server:
 ```bash
 ssh -i ~/.ssh/[private key name].pem ubuntu@[server ip or domain name]
 ```
+
+## Git
+
+Remove a directory completely from a git repo:
+
+``` bash
+git rm -r --cached [directory name]
+git commit -m "removed directory"
+git push origin master
+```
