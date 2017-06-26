@@ -51,10 +51,12 @@ ssh -i ~/.ssh/[private key name].pem ubuntu@[server ip or domain name]
 
 ## Git
 
-Remove a directory completely from git history:
+Remove a directory completely from git history (https://stackoverflow.com/a/17824718/2196424):
 
 ``` bash
-git rm -r --cached [directory name]
-git commit -m "removed directory"
-git push origin master
+git filter-branch --tree-filter "rm -rf [directory name]" --prune-empty HEAD
+git for-each-ref --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d
+git commit -m "Removing [directory name] from git history"
+git gc
+git push origin master --force
 ```
