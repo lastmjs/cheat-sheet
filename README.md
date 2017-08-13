@@ -60,3 +60,7 @@ git commit -m "Removing [directory name] from git history"
 git gc
 git push origin master --force
 ```
+
+## Swap Space
+
+Amazing guide on how to very easily add swap space (in Ubuntu at least): https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04
